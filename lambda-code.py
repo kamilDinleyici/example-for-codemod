@@ -15,7 +15,7 @@ operations = {
 # Lambda in list comprehension
 numbers = [1, 2, 3, 4, 5]
 # This print function was added for testing
-print(numbers)
+log.info(numbers)
 squared_numbers = list(map(lambda x: x ** 2, numbers))
 
 # Lambda as callback
