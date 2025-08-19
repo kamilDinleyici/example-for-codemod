@@ -1,7 +1,8 @@
 """Example Python code with lambda functions to be transformed."""
 
 # Simple lambda functions
-add = lambda x, y: x + y
+def add(x, y):
+    return x + y
 multiply = lambda a, b: a * b
 square = lambda x: x ** 2
 
