@@ -1,9 +1,12 @@
 """Example Python code with lambda functions to be transformed."""
 
 # Simple lambda functions
-add = lambda x, y: x + y
-multiply = lambda a, b: a * b
-square = lambda x: x ** 2
+def add(x, y):
+    return x + y
+def multiply(a, b):
+    return a * b
+def square(x):
+    return x ** 2
 
 # Lambda functions in data structures
 operations = {
@@ -25,4 +28,5 @@ def process_data(data, callback):
 result = process_data([1, 2, 3], lambda lst: sum(lst))
 
 # More complex lambda
-complex_func = lambda x, y=10: (x + y) * 2 if x > 0 else y
+def complex_func(x, y=10):
+    return (x + y) * 2 if x > 0 else y
