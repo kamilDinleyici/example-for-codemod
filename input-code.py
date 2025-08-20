@@ -1,2 +1,2 @@
-print("hello world!")
+log("hello world!")
 log("this is python")
