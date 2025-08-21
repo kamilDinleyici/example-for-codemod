@@ -1,4 +1,7 @@
 """Example Python code with lambda functions to be transformed."""
+from typing import Dict, List
+from pyspark.sql import DataFrame
+
 
 # Simple lambda functions
 add = lambda x, y: x + y
