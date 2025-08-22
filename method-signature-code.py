@@ -1,5 +1,6 @@
 from rocks.noob.share_calculation import AggregatedShareSelection
-from pyspark.sql import functions as F
+from pyspark.sql import functions as F, DataFrame
+from typing import Dict, List
 
 
 class AloYogaAggregatedShareSelection(AggregatedShareSelection):
@@ -7,7 +8,7 @@ class AloYogaAggregatedShareSelection(AggregatedShareSelection):
     Aggregated Share Selection for share calculation pipeline
     """
 
-    def select_aggregated_shares(self, scope_dict: dict) -> dict:
+    def select_aggregated_shares(self, scope_dict: Dict[str, DataFrame], share_list_config: List[Dict]):
         """
         Joins the respective share table & selects for output level
 
@@ -24,7 +25,7 @@ class AloYogaAggregatedShareSelection(AggregatedShareSelection):
             # loop over only for the respective key.
             for share_config in [
                 share_config
-                for share_config in self.share_list_config
+                for share_config in share_list_config
                 if share_config["share_level"] == key
             ]:
                 key_cols = share_config["forecast_level"]
